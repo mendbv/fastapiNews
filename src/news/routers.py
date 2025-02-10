@@ -169,3 +169,22 @@ async def delete_news(news_id: int) -> None:
             raise HTTPException(status_code=404, detail="News not found")
         await session.delete(news)
         await session.commit()
+
+@news_router.put("/{news_id}", response_model=NewsReadSchema)
+async def update_news_item(news_id: int, news_item: NewsCreateSchema) -> News:
+    """
+    Update news item by id
+    """
+    async with async_session() as session:
+        query = select(News).filter(News.id == news_id)
+        result = await session.execute(query)
+        old_news_item = result.scalar_one_or_none()
+        if old_news_item is None:
+            raise HTTPException(status_code=404, detail="News not found")
+
+        for field, value in news_item.dict().items():
+            setattr(old_news_item, field, value)
+
+        await session.commit()
+        await session.refresh(old_news_item)
+        return old_news_item
