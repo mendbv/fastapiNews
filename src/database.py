@@ -16,3 +16,4 @@ class Base(DeclarativeBase):
     """
     Meta class for sqlalchemy ORM models
     """
+

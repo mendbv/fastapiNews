@@ -3,6 +3,7 @@ SQLalchemy ORM models
 """
 from datetime import datetime
 
+
 from sqlalchemy import ForeignKey, String, ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
