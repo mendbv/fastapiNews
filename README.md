@@ -1,7 +1,5 @@
-# Library
-
-FastAPI
-
+# FastAPI News
+News project based on FastAPI
 ## Содержание
 
 - [Начало работы](#начало-работы)
