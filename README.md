@@ -35,7 +35,14 @@ News project based on FastAPI
    ```bash
    pip install -r requirements.txt
    ```
-
+5. Создайте .env файл:
+   ```ENV EXAMPLE
+   DB_NAME = "name"
+   DB_USER = "username"
+   DB_PASSWORD = "password"
+   DB_HOST = 127.0.0.1
+   DB_PORT = 5432
+   ```
 ## Использование
 
 Пример, как использовать проект или запустить скрипты. Например:
