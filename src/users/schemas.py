@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import uuid
-
-from fastapi_users import schemas
-
-
-class UserRead(schemas.BaseUser[uuid.UUID]):
-=======
 """
 User schemas
 """
@@ -20,19 +12,10 @@ class UserRead(schemas.BaseUser[uuid.UUID]):
     """
     UserRead schema
     """
->>>>>>> master
     full_name: str
 
 
 class UserCreate(schemas.BaseUserCreate):
-<<<<<<< HEAD
-    full_name: str
-
-
-class UserUpdate(schemas.BaseUserUpdate):
-    full_name: str | None = None
-    
-=======
     """
     UserCreate schema
     """
@@ -56,4 +39,3 @@ class UserUpdate(schemas.BaseUserUpdate):
     UserUpdate schema
     """
     full_name: str
->>>>>>> master

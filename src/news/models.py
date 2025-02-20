@@ -1,23 +1,15 @@
 """
 SQLalchemy ORM models
 """
-<<<<<<< HEAD
-from datetime import datetime
-
-=======
 
 from uuid import UUID
 from datetime import datetime
->>>>>>> master
 
 from sqlalchemy import ForeignKey, String, ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.database import Base
-<<<<<<< HEAD
-=======
 from src.users.models import User
->>>>>>> master
 
 class Category(Base):
     """
@@ -49,11 +41,6 @@ class News(Base):
     )
 
     category: Mapped[Category | None] = relationship("Category", back_populates="news")
-<<<<<<< HEAD
-
-
-    # sudo docker run --name fast_db -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
-=======
     comments: Mapped[list["Comment"]] = relationship("Comment", back_populates="news")
 
 
@@ -82,4 +69,3 @@ class Comment(Base):
     user: Mapped[User] = relationship("User", back_populates="comments")
 
 
->>>>>>> master
