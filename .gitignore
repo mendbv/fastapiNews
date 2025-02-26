@@ -3,12 +3,9 @@ __pycache__/
 
 .env
 
-<<<<<<< HEAD
-alembic/versions/*
-=======
 alembic/versions/*
 !alembic/versions/.gitkeep
 
 media/*
 !media/.gitkeep
->>>>>>> master
+
